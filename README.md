@@ -2,6 +2,8 @@
 
 Vim plugin grows your grasses with starting Vim.
 
+![vim-pixela](https://pixe.la/v1/users/mattn/graphs/vim-pixela)
+
 ## Usage
 
 ```
