@@ -11,6 +11,8 @@ let g:pixela_username = 'XXX'
 let g:pixela_token = 'XXX'
 ```
 
+You must create graph `vim-pixela` on [Pixela](https://pixe.la/).
+
 ## Requirements
 
 curl command, openbrowser.vim
