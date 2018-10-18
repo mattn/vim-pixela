@@ -15,7 +15,7 @@ You must create graph `vim-pixela` on [Pixela](https://pixe.la/).
 
 ## Requirements
 
-curl command, openbrowser.vim
+vim8, curl command, openbrowser.vim
 
 ## License
 
