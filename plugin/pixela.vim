@@ -19,6 +19,9 @@ function! s:start()
   \  printf('https://pixe.la/v1/users/%s/graphs/vim-pixela/increment', user),
   \  '-H', printf('X-USER-TOKEN:%s', token),
   \  '-H', 'Content-Length:0'], opts)
+
+  " remove event
+  autocmd! vim-pixela
 endfunction
 
 function! s:browser()
@@ -29,8 +32,10 @@ function! s:browser()
   call openbrowser#open(printf('https://pixe.la/v1/users/%s/graphs/vim-pixela', user))
 endfunction
 
-if !v:vim_did_enter
-  au VimEnter * call s:start()
-endif
+augroup vim-pixela
+  autocmd!
+  autocmd VimEnter * call s:start()
+  autocmd User VimPixela call s:start()
+augroup END
 
 command! VimPixela call s:browser()
