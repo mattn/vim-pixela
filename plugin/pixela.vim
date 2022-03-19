@@ -34,11 +34,8 @@ endfunction
 
 augroup vim-pixela
   autocmd!
-  if !v:vim_did_enter
-    autocmd VimEnter * call s:start()
-  else
-    autocmd User VimPixela call s:start()
-  endif
+  autocmd VimEnter * call s:start()
+  autocmd User VimPixela call s:start()
 augroup END
 
 command! VimPixela call s:browser()
