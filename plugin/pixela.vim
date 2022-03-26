@@ -16,6 +16,7 @@ function! s:start()
   endif
   let s:job = job_start([
   \  'curl', '-v', '-X', 'PUT',
+  \  '-o', printf('%s', has('win32') ? 'nul' : '/dev/null'),
   \  printf('https://pixe.la/v1/users/%s/graphs/vim-pixela/increment', user),
   \  '-H', printf('X-USER-TOKEN:%s', token),
   \  '-H', 'Content-Length:0'], opts)
